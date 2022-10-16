@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('homepage');
 
 
 
@@ -39,6 +39,6 @@ Route::get('/', function () {
 
 
 // risorse parziali
-route::resource('fumetti', 'PageController')->except([
+route::resource('comics', 'PageController')->except([
     'edit', 'update', 'destroy'
 ]);

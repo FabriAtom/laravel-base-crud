@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFumettiTable extends Migration
+class CreateComicsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateFumettiTable extends Migration
      */
     public function up()
     {
-        Schema::create('fumetti', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
-            $table->char('title', 50);
-            $table->text('description')->nullable();
-            $table->char('thumb', 20);
+            $table->string('title', 100);
+            $table->text('description');
+            $table->string('thumb');
             $table->decimal('price', 4,2);
-            $table->char('series', 50);
-            $table->binary('sale_date');
-            $table->char('type', 30);
+            $table->string('series', 50);
+            $table->date('sale_date', 100);
+            $table->string('type', 100);
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateFumettiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fumetti');
+        Schema::dropIfExists('comics');
     }
 }

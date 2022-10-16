@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Comic;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -14,8 +14,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        $fumetti = fumetto::all();
-        dd($fumetti);
+        // $fumetti = fumetto::all();
+        // dd($fumetti);
     }
 
     /**

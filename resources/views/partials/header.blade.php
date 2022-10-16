@@ -2,8 +2,13 @@
     <main>
         <ul>
             <li>
-                <a href="{{route ('fumetti.index') }}">
-                    Fumetti
+                <a href="{{ route('homepage') }}">
+                    Homepage
+                </a>
+            </li>
+            <li>
+                <a href="{{route ('comics.index') }}">
+                    comics
                 </a>
             </li>
         </ul>

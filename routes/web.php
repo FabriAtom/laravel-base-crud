@@ -39,6 +39,4 @@ Route::get('/', function () {
 
 
 // risorse parziali
-route::resource('comics', 'PageController')->except([
-    'edit', 'update', 'destroy'
-]);
+route::resource('/comics', 'PageController');

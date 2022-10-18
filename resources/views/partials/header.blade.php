@@ -8,7 +8,7 @@
             </li>
             <li>
                 <a href="{{route ('comics.index') }}">
-                    comics
+                    Fumetti
                 </a>
             </li>
         </ul>
